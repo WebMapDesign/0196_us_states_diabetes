@@ -1,0 +1,113 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+#map-conus {
+  width: 850px;
+  height: 600px;
+  margin: 10px;
+  z-index: 1000;
+  border: 1px solid black;
+}
+
+#map-Alaska {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  width: 250px;
+  height: 180px;
+  z-index: 1000;
+  border: 1px solid black;
+}
+
+#map-Hawaii {
+  position: absolute;
+  bottom: 10px;
+  left: 270px;
+  width: 190px;
+  height: 120px;
+  z-index: 800;
+  border: 1px solid black;
+}
+
+#map-title {
+  position: absolute;
+  top: 20px;
+  left: 400px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.leaflet-container {
+  background-color: #ececec;
+}
+
+#map-Alaska.leaflet-container,
+#map-Hawaii.leaflet-container {
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.leaflet-popup-content p {
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+.popup-text {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 0.6;
+}
+
+.popup-title {
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  line-height: 0.8;
+}
+
+.tooltip-style,
+.leaflet-tooltip {
+  font-size: 10px;
+  font-weight: 400;
+  text-align: center;
+  padding: 1px !important;
+  margin: 1px !important;
+  line-height: 14px;
+}
+
+.leaflet-control-zoom {
+  border-bottom: 1px solid #ccc;
+}
+
+.info {
+  padding: 6px 8px;
+  background-color: #ffffff;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+.legend {
+  line-height: 24px;
+  color: #555;
+}
+
+.legend i {
+  float: left;
+  width: 30px;
+  height: 18px;
+  margin-right: 10px;
+  opacity: 1;
+  border: 1px solid black;
+}
+
+p.legend-title {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  line-height: 18px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
