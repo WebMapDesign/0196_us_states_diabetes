@@ -350,7 +350,7 @@ function onEachFeatureHawaiiAllTeeth(feature, layer) {
 const mapTitle = document.getElementById("map-title-text");
 
 let baseLayers = {
-  Diabetes: layerContiguousDiabetes,
+  "Prevalence Diabetes": layerContiguousDiabetes,
   "Had Dental Visit": layerContiguousHadVisit,
   "Retained All Teeth": layerContiguousAllTeeth,
 };
@@ -362,31 +362,31 @@ legendDiabetes.onAdd = function (mapConus) {
   let div = L.DomUtil.create("div", "info legend legend-diabetes");
 
   div.innerHTML =
-    '<p class="legend-title">Diabetes (%)</p>' +
+    '<p class="legend-title">Prevalence <br> Diabetes (%)</p>' +
     '<i style="background:' +
     "#ff0000" +
     '"></i> ' +
-    "> 14" +
+    "14.0 + " +
     "<br>" +
     '<i style="background:' +
     "#ff4040" +
     '"></i> ' +
-    "12 - 14" +
+    "12.0 - 13.9" +
     "<br>" +
     '<i style="background:' +
     "#ff8080" +
     '"></i> ' +
-    "10 - 12" +
+    "10.0 - 11.9" +
     "<br>" +
     '<i style="background:' +
     "#ffbfbf" +
     '"></i> ' +
-    "8 - 10" +
+    "8.0 - 9.9" +
     "<br>" +
     '<i style="background:' +
     "#ffffff" +
     '"></i> ' +
-    "< 8";
+    "0.0 - 7.9";
 
   return div;
 };
@@ -398,31 +398,31 @@ legendHadVisit.onAdd = function (mapConus) {
   let div = L.DomUtil.create("div", "info legend legend-hadvisit");
 
   div.innerHTML =
-    '<p class="legend-title">Had Visit (%)</p>' +
+    '<p class="legend-title">Had Dental <br>Visit (%)</p>' +
+    '<i style="background:' +
+    "#2c5b9d" +
+    '"></i> ' +
+    "65.0 + " +
+    "<br>" +
+    '<i style="background:' +
+    "#2879b9" +
+    '"></i> ' +
+    "60.0 - 64.9" +
+    "<br>" +
+    '<i style="background:' +
+    "#73b3d8" +
+    '"></i> ' +
+    "55.0 - 59.9" +
+    "<br>" +
+    '<i style="background:' +
+    "#c8ddf0" +
+    '"></i> ' +
+    "50.0 - 54.9" +
+    "<br>" +
     '<i style="background:' +
     "#ffffff" +
     '"></i> ' +
-    "> 65" +
-    "<br>" +
-    '<i style="background:' +
-    "#ffbfbf" +
-    '"></i> ' +
-    "60 - 65" +
-    "<br>" +
-    '<i style="background:' +
-    "#ff8080" +
-    '"></i> ' +
-    "55 - 60" +
-    "<br>" +
-    '<i style="background:' +
-    "#ff4040" +
-    '"></i> ' +
-    "50 - 55" +
-    "<br>" +
-    '<i style="background:' +
-    "#ff0000" +
-    '"></i> ' +
-    "< 50";
+    "0.0 - 49.9";
 
   return div;
 };
@@ -432,31 +432,31 @@ legendAllTeeth.onAdd = function (mapConus) {
   let div = L.DomUtil.create("div", "info legend legend-allteeth");
 
   div.innerHTML =
-    '<p class="legend-title">All Teeth (%)</p>' +
+    '<p class="legend-title">Retained<br>All Teeth (%)</p>' +
+    '<i style="background:' +
+    "#467a5a" +
+    '"></i> ' +
+    "40.0 + " +
+    "<br>" +
+    '<i style="background:' +
+    "#2a924a" +
+    '"></i> ' +
+    "35.0 - 39.9" +
+    "<br>" +
+    '<i style="background:' +
+    "#7bc87c" +
+    '"></i> ' +
+    "30.0 - 34.9" +
+    "<br>" +
+    '<i style="background:' +
+    "#caeac3" +
+    '"></i> ' +
+    "25.0 - 29.9" +
+    "<br>" +
     '<i style="background:' +
     "#ffffff" +
     '"></i> ' +
-    "> 40" +
-    "<br>" +
-    '<i style="background:' +
-    "#ffbfbf" +
-    '"></i> ' +
-    "35 - 40" +
-    "<br>" +
-    '<i style="background:' +
-    "#ff8080" +
-    '"></i> ' +
-    "30 - 35" +
-    "<br>" +
-    '<i style="background:' +
-    "#ff4040" +
-    '"></i> ' +
-    "25 - 30" +
-    "<br>" +
-    '<i style="background:' +
-    "#ff0000" +
-    '"></i> ' +
-    "< 25";
+    "0.0 - 24.9";
 
   return div;
 };
@@ -469,8 +469,9 @@ const mapLayersLegends = {
 
 const mapLayersTitles = {
   "Prevalence Diabetes": "Prelavence of Diabetes",
-  "Had Dental Visit": "Had Dental Visit Last Year",
-  "Retained All Teeth": "Retained All Teeth",
+  "Had Dental Visit":
+    "Proportion of Diabetic Adults Who Had a Dental Visit Within a Year",
+  "Retained All Teeth": "Proportion of Diabetic Adults Who Retained All Teeth",
 };
 
 let mapLegends = [legendDiabetes, legendHadVisit, legendAllTeeth];

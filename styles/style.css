@@ -35,10 +35,10 @@
 
 #map-title {
   position: absolute;
-  top: 20px;
-  left: 400px;
-  text-transform: uppercase;
+  top: 10px;
+  left: 550px;
   text-align: center;
+  transform: translateX(-50%);
 }
 
 .leaflet-container {

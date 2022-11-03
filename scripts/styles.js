@@ -3,39 +3,39 @@ let popupStyle = {
 };
 
 function colorRampDiabetes(a) {
-  return a > 14
+  return a >= 14
     ? "#ff0000"
-    : a > 12
+    : a >= 12
     ? "#ff4040"
     : a >= 10
     ? "#ff8080"
-    : a > 8
+    : a >= 8
     ? "#ffbfbf"
     : "#ffffff";
 }
 
 function colorRampHadVisit(a) {
-  return a > 65
-    ? "#ffffff"
-    : a > 60
-    ? "#ffbfbf"
+  return a >= 65
+    ? "#2c5b9d"
+    : a >= 60
+    ? "#2879b9"
     : a >= 55
-    ? "#ff8080"
-    : a > 50
-    ? "#ff4040"
-    : "#ff0000";
+    ? "#73b3d8"
+    : a >= 50
+    ? "#c8ddf0"
+    : "#ffffff";
 }
 
 function colorRampAllTeeth(a) {
-  return a > 40
-    ? "#ffffff"
-    : a > 35
-    ? "#ffbfbf"
+  return a >= 40
+    ? "#467a5a"
+    : a >= 35
+    ? "#2a924a"
     : a >= 30
-    ? "#ff8080"
-    : a > 25
-    ? "#ff4040"
-    : "#ff0000";
+    ? "#7bc87c"
+    : a >= 25
+    ? "#caeac3"
+    : "#ffffff";
 }
 
 function styleDiabetes(feature) {
